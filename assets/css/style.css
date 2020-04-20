@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: calc(100vh);
+  background: radial-gradient(#fff, #ccc);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.controls {
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.controls ._btns {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.controls ._btns div {
+  background: transparent;
+  padding: 0;
+  display: inline-block;
+}
+
+.controls ._btns div button {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  background: cornflowerblue;
+  box-shadow: #888 3px 3px 3px;
+}
+
+.controls ._btns div button span {
+  color: #fff;
+  font-size: 20px;
+}
+
+.controls ._btns div button:active span {
+  color: cornflowerblue;
+}
+
+#cont-prosas #id {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-style: normal;
+}
+
+#cont-prosas #prosas {
+  height: calc(100vh - 74px);
+  width: 700px;
+  margin: auto;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.7;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#cont-prosas .cita {
+  margin-top: 20px;
+  text-align: right;
+  padding-right: 15px;
+}
+
+#cont-prosas .cita .libro,
+#cont-prosas .cita .autor {
+  display: block;
+  color: #222;
+  line-height: 1;
+}
+
+#cont-prosas .cita .libro {
+  font-style: italic;
+  font-size: 28px;
+}
+
+#cont-prosas .cita .autor {
+  margin-right: 15px;
+  font-size: 18px;
+  font-style: normal;
+  color: #555;
+}
+
+.version {
+  text-align: center;
+}
+
+.version * {
+  color: #555;
+}
+
+.version ._cita {
+  margin-top: 10px;
+  margin-bottom: 7vh;
+}
+
+.version .cita {
+  text-align: center;
+}
+
+.version .cita .libro {
+  display: block;
+  font-size: 30px;
+  color: #000;
+}
+
+.version .cita .autor {
+  margin-right: 0;
+  color: #555;
+}
+
+.version img {
+  width: 40vh;
+}
+
+.version h4 > a {
+  font-size: 18px;
+  padding: 10px 0;
+  background-color: transparent;
+  text-decoration: none;
+  color: #333;
+}
+
+.version h4 > a > i {
+  color: #3578E5;
+}
+
+@media (max-width: 800px) {
+  #cont-prosas #prosas {
+    height: calc(100vh - 74px - 50px);
+    width: 100%;
+    font-size: 14px;
+    padding: 0 30px;
+  }
+  #cont-prosas .cita .libro {
+    font-size: 20px;
+  }
+  #cont-prosas .cita .autor {
+    font-size: 12px;
+  }
+  ._cita {
+    padding: 5px 7%;
+    text-align: right;
+    margin-top: 15px;
+  }
+}
+
+#iniciando {
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  display: block;
+  background: radial-gradient(#fff, #ccc);
+  opacity: 100%;
+}
+
+#iniciando #cont-ini {
+  margin: 0 auto;
+  width: 600px;
+  transition: all 1s;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #iniciando #cont-ini {
+    width: 100%;
+  }
+}
+
+#iniciando #cont-ini img {
+  width: 200px;
+}
+
+#iniciando #cont-ini .cita {
+  text-align: center;
+}
+
+#iniciando #cont-ini .cita .libro {
+  display: block;
+  font-size: 28px;
+}
+
+#iniciando #cont-ini .cita .autor {
+  font-size: 18px;
+}
+
+#iniciando #cont-ini .progress {
+  background-color: transparent;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10vh;
+  text-align: left;
+  position: relative;
+}
+
+#iniciando #cont-ini .progress:before {
+  content: '';
+  width: 0;
+  height: 10px;
+  position: absolute;
+  background: rgba(100, 149, 237, 0.9);
+  animation: load 2.5s;
+  border-radius: 5px;
+}
+
+@keyframes load {
+  100% {
+    width: 100%;
+  }
+}
+
+.icon-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(153, 153, 153, 0.2);
+  color: #555;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px 10px 0 0;
+  border-radius: 50%;
+}
+
+.icon-info:active {
+  color: #000;
+}

@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    //padding-top: 20vh;
+    min-height: calc(100vh);
+    background: radial-gradient( #fff, #ccc);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.controls {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    ._btns {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 30px;
+        div {
+            background: transparent;
+            padding: 0;
+            display: inline-block;
+            button {
+                display: block;
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                padding: 10px;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                margin: 2px;
+                background: cornflowerblue;
+                box-shadow: #888 3px 3px 3px;
+                span {
+                    color: #fff;
+                    font-size: 20px;
+                }
+                &:active {
+                    span {
+                        color: cornflowerblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#cont-prosas {
+    //padding: 0 20%;
+    #id {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-style: normal;
+    }
+    #prosas {
+        height: calc(100vh - 74px);
+        width: 700px;
+        margin: auto;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 18px;
+        text-align: justify;
+        line-height: 1.7;
+        //
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .cita {
+        margin-top: 20px;
+        text-align: right;
+        padding-right: 15px;
+        .libro,
+        .autor {
+            display: block;
+            color: #222;
+            line-height: 1;
+        }
+        .libro {
+            font-style: italic;
+            font-size: 28px;
+        }
+        .autor {
+            margin-right: 15px;
+            font-size: 18px;
+            font-style: normal;
+            color: #555;
+        }
+    }
+}
+
+//==================================
+.version {
+    text-align: center;
+    * {
+        color: #555;
+    }
+    ._cita {
+        margin-top: 10px;
+        margin-bottom: 7vh;
+    }
+    .cita {
+        text-align: center;
+        .libro {
+            display: block;
+            font-size: 30px;
+            color: #000;
+        }
+        .autor {
+            margin-right: 0;
+            color: #555;
+        }
+    }
+    img {
+        width: 40vh;
+    }
+    h4>a {
+        font-size: 18px;
+        padding: 10px 0;
+        background-color: transparent;
+        text-decoration: none;
+        color: #333;
+        >i {
+            color: #3578E5;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        //padding-top: 10vh;
+    }
+    #cont-prosas {
+        //padding: 0 7%;
+        #prosas {
+            height: calc(100vh - 74px - 50px);
+            width: 100%;
+            font-size: 14px;
+            padding: 0 30px;
+        }
+        .cita {
+            .libro {
+                font-size: 20px;
+            }
+            .autor {
+                font-size: 12px;
+            }
+        }
+    }
+    //=================
+    ._cita {
+        padding: 5px 7%;
+        text-align: right;
+        margin-top: 15px;
+    }
+}
+
+#iniciando {
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    display: block;
+    background: radial-gradient( #fff, #ccc);
+    opacity: 100%;
+    //
+    //nnnn
+    #cont-ini {
+        margin: 0 auto;
+        width: 600px;
+        //background: red;
+        transition: all 1s;
+        text-align: center;
+        @media(max-width: 600px) {
+            width: 100%;
+        }
+        //
+        img {
+            width: 200px;
+        }
+        .cita {
+            text-align: center;
+            .libro {
+                display: block;
+                font-size: 28px;
+            }
+            .autor {
+                font-size: 18px;
+            }
+        }
+        .progress {
+            background-color: transparent;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 10vh;
+            text-align: left;
+            position: relative;
+            &:before {
+                content: '';
+                width: 0;
+                height: 10px;
+                position: absolute;
+                background: rgba(cornflowerblue, .9);
+                animation: load 2.5s;
+                border-radius: 5px;
+                @keyframes load {
+                    100% {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.icon-info {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(#999, .2px);
+    color: #555;
+    padding: 10px;
+    text-decoration: none;
+    margin: 10px 10px 0 0;
+    border-radius: 50%;
+    &:active {
+        color: #000;
+    }
+}
